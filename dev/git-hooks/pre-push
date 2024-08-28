@@ -1,0 +1,10 @@
+#!/bin/sh
+
+mix lint_hook
+mix security_hook
+mix testd
+
+if [ $? -ne 0 ]; then
+  echo "Linting, security checks, or tests failed! Aborting push."
+  exit 1
+fi

@@ -5,6 +5,7 @@ config :calendlex, Calendlex.Repo,
   username: "postgres",
   password: "postgres",
   database: "calendlex_dev",
+  port: 5555,
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -18,7 +19,7 @@ config :calendlex, Calendlex.Repo,
 config :calendlex, CalendlexWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
-  http: [ip: {127, 0, 0, 1}, port: 4000],
+  http: [ip: {127, 0, 0, 1}, port: 4555],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
